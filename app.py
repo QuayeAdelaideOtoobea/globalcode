@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask , render_template
 
 app = Flask(__name__)
 
@@ -16,6 +16,12 @@ def whereami():
 @app.route('/getallitems')
 def shapes():
     return shapes_list
+
+@app.route('/club')
+def home():
+    return render_template('club.html')
+
+
 
 
 
